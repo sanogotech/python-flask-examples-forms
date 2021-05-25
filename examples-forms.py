@@ -7,6 +7,7 @@ app.config['SECRET_KEY'] = 'our very hard to guess secretfir'
 
 # import declared routes
 from testroutes import test
+from scriptWebScrap import launchScript
 
 @app.route('/')
 def index():
@@ -25,6 +26,11 @@ def sign_up():
         first_name = request.form['firstname']
         last_name = request.form['lastname']
 
+               
+        # launchScript *** Test Call Script
+        launchScript()
+        
+        
         # Validate form data
         if len(first_name) == 0 or len(last_name) == 0:
             # Form data failed validation; try again
@@ -32,6 +38,9 @@ def sign_up():
         else:
             # Form data is valid; move along
             return redirect(url_for('thank_you'))
+            
+     
+    
 
     # Render the sign-up page
     return render_template('sign-up.html', message=error)
