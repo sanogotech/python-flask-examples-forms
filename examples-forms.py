@@ -5,6 +5,9 @@ from wtforms import TextField
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'our very hard to guess secretfir'
 
+# import declared routes
+from testroutes import test
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -53,6 +56,9 @@ def register():
             return redirect(url_for('thank_you'))
 
     return render_template('register.html', form=form, message=error)
+
+
+
 
 # Run the application
 app.run(debug=True)

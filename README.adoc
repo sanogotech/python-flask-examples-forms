@@ -3,6 +3,10 @@
 An HTML form a the primary user interface element that allows
 a web application user to send data back to the web server.
 
+## Docs
+- https://realpython.com/absolute-vs-relative-python-imports/
+- https://www.geeksforgeeks.org/flask-creating-first-simple-application/
+
 == Get vs Post
 
 When submitting a form,
